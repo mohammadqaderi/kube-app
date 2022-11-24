@@ -19,9 +19,7 @@ spec:
           image: vprofile/vprofiledb:V1
           args:
             # we use this arg to ignore the lost+found directory and map our volume to /var/lib/mysql
-            - "--ignore-db-dir"
-            - "lost+found"
-            - "ignore-db-dir=lost+found"
+            - "--ignore-db-dir=lost+found"
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: vpro-db-data
